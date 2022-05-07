@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=PT+Serif:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply flex flex-col items-center;
+  }
+  .img-con {
+    @apply overflow-hidden w-40;
+  }
+  .img {
+    @apply w-40 transform duration-500 ease-in-out hover:grayscale-[50%] hover:rotate-[25deg] hover:scale-150 rounded-lg cursor-pointer;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .card:nth-child(even) {
+    margin-top: 5rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .card:nth-child(3n-1) {
+    margin-top: 5rem;
+  }
+}
